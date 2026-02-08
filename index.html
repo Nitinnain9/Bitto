@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Bitto ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+
+  /* 📸 BACKGROUND IMAGE */
+  background:
+    linear-gradient(rgba(255,182,193,0.6), rgba(255,105,135,0.6)),
+    url("bg.jpg");
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  min-height:100vh;
+}
+
+/* 💓 GLASS CARD */
+.container{
+  max-width:700px;
+  margin:40px auto;
+  padding:40px;
+  border-radius:25px;
+  text-align:center;
+
+  background:rgba(255,240,246,0.80);
+  backdrop-filter:blur(10px);
+
+  box-shadow:0 20px 50px rgba(0,0,0,0.35);
+}
+
+/* TITLE */
+.title{
+  font-family:'Great Vibes',cursive;
+  font-size:42px;
+  color:#e63946;
+}
+
+/* TEXT */
+p{
+  line-height:2;
+  font-size:17px;
+  color:#3a3a3a;
+  text-align:left;
+}
+
+/* PASSWORD BOX */
+.pass-box{
+  position:relative;
+  margin-top:15px;
+}
+.pass-box input{
+  width:80%;
+  padding:12px;
+  border-radius:12px;
+  border:none;
+  font-size:16px;
+}
+.pass-box span{
+  position:absolute;
+  right:12%;
+  top:10px;
+  cursor:pointer;
+}
+
+/* BUTTON */
+button{
+  margin-top:15px;
+  padding:12px 25px;
+  border:none;
+  border-radius:12px;
+  background:#e63946;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+  transition:.3s;
+}
+button:hover{
+  transform:scale(1.05);
+  background:#d62839;
+}
+
+/* HIDE LETTER */
+#letter{display:none;}
+</style>
+</head>
+
+<body>
+
+<!-- 🎵 BACKGROUND MUSIC -->
+<audio id="bgmusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- PASSWORD PAGE -->
+<div class="container" id="lock">
+  <h2 class="title">A Secret For My Bitto ❤️</h2>
+  <p style="text-align:center;">Only my love can open this 💌</p>
+
+  <div class="pass-box">
+    <input type="password" id="pass" placeholder="Enter our secret password">
+    <span onclick="toggle()">👁</span>
+  </div>
+
+  <button onclick="openLetter()">Open Letter 💖</button>
+</div>
+
+<!-- LOVE LETTER -->
+<div class="container" id="letter">
+  <h1 class="title">For My Bitto ❤️</h1>
+
+  <p>
+<b>I truly love you mera baccha 😚💕, and I miss you more than I can explain 🥺🫂💞.</b><br><br>
+
+Kabhi-kabhi gusse me kuch galat bol deta hoon, par dil se kabhi bhi  
+tumhe hurt nahi karna chahta… kabhi nahi 🤍.<br><br>
+
+Bas itna sa kehna tha… mujhse zyada der naraz mat raha karo na babu 🥺.  
+Main thoda emotional ho jata hoon tumhare liye…  
+isliye ladai me bhi bas tumhe hi manaane ka mann karta hai baccha 🫂.<br><br>
+
+<b>I love you sooooo much meri Bittu 🤌😚, mera baccha 💕, my wife ❤️🥹🫂.</b><br>
+Main hamesha tumse pyaar karta rahunga… chahe kuch bhi ho jaye 💞.<br>
+Hamesha mere saath rehna… kabhi mujhse door mat jaana babu 🫂.<br>
+Tum meri life ki sabse kimti cheez ho meri jaan 🤍.<br>
+Sach me, tumhare bina main kuch bhi nahi hoon…  
+aur main tumhe hamesha khush rakhna chahta hoon baccha ❤️✨.<br><br>
+
+Bss wait kar raha hu ki jaldi se tumse milu 🤌🥺.<br>
+<b>I always Love you my Bitto ❤️</b><br><br>
+
+— Your Sonteya 😚❤️
+  </p>
+</div>
+
+<script>
+function openLetter(){
+  let p=document.getElementById("pass").value.trim();
+
+  if(p==="ILoveYouBitto"){
+    document.getElementById("lock").style.display="none";
+    document.getElementById("letter").style.display="block";
+
+    // 🎵 PLAY MUSIC AFTER CLICK (ANDROID FIX)
+    document.getElementById("bgmusic").play();
+  }else{
+    alert("Wrong password 😝");
+  }
+}
+
+function toggle(){
+  let x=document.getElementById("pass");
+  x.type = x.type==="password" ? "text" : "password";
+}
+</script>
+
+</body>
+</html>
